@@ -33,7 +33,6 @@ class DashBoard extends React.Component {
     });
     return (
       <div className="view-container dashboard">
-        <Text>HEADER</Text>
         <div className="dashboard-content">
           <Projects projects={this.state.projectData} />
         </div>
