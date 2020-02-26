@@ -1,5 +1,5 @@
 import React from "react";
-import Projects from "../../components/Projects";
+import { Projects, Blocks } from "../../components";
 
 class DashBoard extends React.Component {
   constructor(props) {
@@ -36,6 +36,10 @@ class DashBoard extends React.Component {
         <div className="dashboard-content">
           <Projects projects={this.state.projectData} />
         </div>
+        <br />
+        <div>Status</div>
+        <br />
+        <Blocks projects={this.state.projectData} />
       </div>
     );
   }
