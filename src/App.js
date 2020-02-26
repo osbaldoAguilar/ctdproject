@@ -1,7 +1,7 @@
 import React from "react";
 // import logo from "./logo.svg";
 import { DashBoard, Modals } from "./container";
-import ReactDom from "react-dom";
+// import ReactDom from "react-dom";
 import Modal from "react-modal";
 import "./App.css";
 
