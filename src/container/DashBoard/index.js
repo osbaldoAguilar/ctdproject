@@ -1,15 +1,26 @@
 import React from "react";
-import { Projects, Blocks } from "../../components";
+import { Projects, Blocks, Header } from "../../components";
 
 class DashBoard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projectData: []
+      projectData: [],
+      selectedProject: {}
     };
   }
   componentDidMount() {
     this.getAirTable();
+  }
+
+  selectProject = (id) => {
+    const allProjects = this.state.projectData
+    console.log('see', id)
+    const selectedProject = allProjects.find(x => x.id === id);
+    console.log(selectedProject)
+    this.setState({
+      selectedProject
+    })
   }
 
   getAirTable() {
@@ -28,18 +39,22 @@ class DashBoard extends React.Component {
   }
 
   render() {
-    const projectList = this.state.projectData.map(projectitem => {
-      console.log(projectitem.fields.Name);
-    });
+    // const projectList = this.state.projectData.map(projectitem => {
+    //   console.log(projectitem.fields.Name);
+    // });
     return (
       <div className="view-container dashboard">
         <div className="dashboard-content">
-          <Projects projects={this.state.projectData} />
+          {/* <Projects projects={this.state.projectData} /> */}
         </div>
         <br />
         <div>Status</div>
         <br />
-        <Blocks projects={this.state.projectData} />
+        {/* <Blocks projects={this.state.projectData} /> */}
+        {this.state.projectData && <Header 
+        projectData = {this.state.projectData}
+        selectProject = {this.selectProject}
+      />  }
       </div>
     );
   }
