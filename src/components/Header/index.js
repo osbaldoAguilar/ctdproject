@@ -1,32 +1,31 @@
-import React from 'react';
-import '../../styles/header.css'
+import React, { useState, useEffect } from 'react';
+import { render } from 'react-dom';      
+import shuffle from 'lodash/shuffle';     
+// import data from './data';              // may not need
+import '../../styles/header.css';
 
 const Header = (props) => {             // header of page
   const projectList = props.projectData.map((project) => {    
     const projectTitles = project.fields.Name.toUpperCase();
     return(
-      <div className = 'backgrounds'>
+      <li className = 'backgrounds-project-item'>
         <div key = {project.id} 
         onClick = {() => props.selectProject(project.id)}
-        className = 'card'
-        style = {{
-          fontSize: "15px",
-          fontColor: "black"
-        }}>
-          <p>{projectTitles}</p>
+        className = 'card'>
+          <h4 className = 'project-titles'>{projectTitles}</h4>
         </div>
-      </div>
+      </li>
     )
   });
   
   console.log('this ', projectList)
-  // const projectList = props.projectData.map((project) => project
-  // console.log('this ',projectList)
   return(
-    <div className = 'container'>
+    <ul className = 'container project-list'>
       {projectList}
-    </div>
+    </ul>
   )
 }
+
+
 
 export default Header

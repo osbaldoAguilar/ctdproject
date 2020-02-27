@@ -4,26 +4,49 @@
 
 .container {
   display: flex;
-  overflow-x: scroll;
-  width: 100%;
+    overflow-x: scroll !important;
+    width: 100%;
 }
 
 .card {
   flex-shrink: 0;
-  width: 159px;
-  height: 57px;
+  width: 200px;
+  height: 200px;
   border-radius: 10px;
   margin-left: 10px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  /* background-color: white; */
+  background-color: white;
+  padding: 50px;
 }
 
-.backgrounds {
-  background: black;        /* add code the dream orange color (maybe) */
+.view-container.dashboard {
+  /* display: block; */
+  width: 100%;
 }
 
-/* .App-header {
-  overflow-x: hidden;   // it doesnt work properly
-} */
+.project-list {
+  color: black;
+  font-weight: bold;
+  list-style: none;
+  padding-top: 7px;
+
+  /* transform: rotate(-90deg); */
+  /* transform-origin: right top; */
+}
+
+.project-titles {
+  padding-top: 13px;
+}
+
+.App-header {
+  overflow-x: hidden;
+}
+
+.background-project-item {
+  cursor: pointer;
+}
+
+
+
