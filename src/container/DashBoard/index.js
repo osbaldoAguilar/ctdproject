@@ -1,27 +1,28 @@
 import React from "react";
-import { Projects, Blocks, Header } from "../../components";
+import logo from "../../logo.svg";
+import { Block, Header } from "../../components";
 
 class DashBoard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projectData: [],
-      selectedProject: {}
+      projectData: []
+      // selectedProject: {}
     };
   }
   componentDidMount() {
     this.getAirTable();
   }
 
-  selectProject = (id) => {
-    const allProjects = this.state.projectData
-    console.log('see', id)
+  selectProject = id => {
+    const allProjects = this.state.projectData;
+    console.log("see", id);
     const selectedProject = allProjects.find(x => x.id === id);
-    console.log(selectedProject)
+    console.log(selectedProject);
     this.setState({
       selectedProject
-    })
-  }
+    });
+  };
 
   getAirTable() {
     const url = "https://api.airtable.com/v0/appQSPi3XUdUMbM1m/Projects";
@@ -39,22 +40,25 @@ class DashBoard extends React.Component {
   }
 
   render() {
+    console.log(this.state.selectedProject);
     // const projectList = this.state.projectData.map(projectitem => {
     //   console.log(projectitem.fields.Name);
     // });
     return (
       <div className="view-container dashboard">
         <div className="dashboard-content">
-          {/* <Projects projects={this.state.projectData} /> */}
+          {this.state.projectData && (
+            <Header
+              projectData={this.state.projectData}
+              selectProject={this.selectProject}
+            />
+          )}
+          {this.state.selectedProject ? (
+            <Block project={this.state.selectedProject} />
+          ) : (
+            <img src={logo} className="App-logo" alt="logo" />
+          )}
         </div>
-        <br />
-        <div>Status</div>
-        <br />
-        {/* <Blocks projects={this.state.projectData} /> */}
-        {this.state.projectData && <Header 
-        projectData = {this.state.projectData}
-        selectProject = {this.selectProject}
-      />  }
       </div>
     );
   }
