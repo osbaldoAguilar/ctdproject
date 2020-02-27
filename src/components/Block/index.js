@@ -2,39 +2,76 @@ import React from "react";
 
 const Block = props => {
   const { project } = props;
-  console.log("External: ", project.External);
-  const External = project.External;
-  //   if (External === undefined) {
-  //     this.setState({
-  //       External: false
-  //     });
-  //   }
+  console.log("WHAT", project);
+  console.log("Name of the project selected: ", project.fields.Name);
   return (
-    <div className="modal">
-      <div class="project">Project Title: {project.Name}</div>
-      {project.Front_Ends && (
-        <div class="project">Front End: {project.Front_Ends}</div>
-      )}
-      {project.Rails_Devs && (
-        <div class="project">Rails Devs: {project.Rails_Devs}</div>
-      )}
-      {project.Current_Team && (
-        <div class="project">Current Team: {project.Current_Team}</div>
-      )}
-      {project.Status && <div class="project">Stauts: {project.Status}</div>}
-      {project.Type && <div class="project">Type: {project.Type}</div>}
-      {project.External && <div class="project">External: {External}</div>}
-      {project.Repo && <div class="project">Repo: {project.Repo}</div>}
-      {project.Notes && <div class="project">Notes: {project.Notes}</div>}
-      {project.Meeting_Time && (
-        <div class="project">Meeting Time:{project.Meeting_Time}</div>
-      )}
-      {project.Project_Description && (
-        <div class="project">
-          Project Description: {project.Project_Description}
+    <div className="flip-card">
+      <div className="flip-card-inner">
+        <div className="flip-card-front">
+          <div>Name of the Project</div>
+          <div>{project.fields.Name}</div>
+          {/* <img src="../Styles/images/ctd.jpg" /> */}
         </div>
-      )}
-      {project.Website && <div class="project">Website: {project.Website}</div>}
+        <div className="flip-card-back">
+          <div>Project Title</div>
+          <div>{project.fields.Name}</div>
+          {/* {project.fields.Front_Ends && (
+            <div>Front End: {project.fields.Front_Ends}</div>
+          )} */}
+          {/* {project.fields.Rails_Devs && (
+            <div>Rails Devs: {project.fields.Rails_Devs}</div>
+          )} */}
+          {project.fields.Current_Team && (
+            <div className="block-content-container">
+              <div>Current Team</div>
+              <div>{project.fields.Current_Team}</div>
+            </div>
+          )}
+          {project.fields.Status && (
+            <div className="block-content-container">
+              <div>Stauts</div>
+              <div>{project.fields.Status}</div>
+            </div>
+          )}
+          {project.fields.Type && (
+            <div className="block-content-container">
+              <div>Type</div>
+              <div>{project.fields.Type}</div>
+            </div>
+          )}
+          {/* {project.fields.External && <div>External{External}</div>} */}
+          {project.fields.Repo && (
+            <div className="block-content-container">
+              <div>Repo</div>
+              <div>{project.fields.Repo}</div>
+            </div>
+          )}
+          {project.fields.Notes && (
+            <div className="block-content-container">
+              <div>Notes</div>
+              <div>{project.fields.Notes}</div>
+            </div>
+          )}
+          {project.fields.Meeting_Time && (
+            <div className="block-content-container">
+              <div>Meeting Time</div>
+              <div>{project.fields.Meeting_Time}</div>
+            </div>
+          )}
+          {project.fields.Project_Description && (
+            <div className="block-content-container">
+              <div>Project Description</div>
+              <div>{project.fields.Project_Description}</div>
+            </div>
+          )}
+          {project.fields.Website && (
+            <div className="block-content-container">
+              <div>Website</div>
+              <div>{project.fields.Website}</div>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

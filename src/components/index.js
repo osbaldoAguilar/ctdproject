@@ -1,5 +1,4 @@
-import Projects from "./Projects/index";
-import Blocks from "./Blocks/index";
-import Header from './Header';
+import Block from "./Block/index";
+import Header from "./Header";
 
-export { Projects, Blocks, Header };
+export { Block, Header };
