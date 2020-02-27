@@ -1,0 +1,35 @@
+.card-content {
+  /* color: orange; */
+  text-align: center;
+  border: 12px solid #043e78;
+  background-color: #043e78;
+  border-radius: 5px;
+  margin: auto;
+  width: 50%;
+  /* border: 3px solid green; */
+  padding: 20px;
+  /* width: 400px; */
+}
+.card-text {
+  text-align: center;
+  border: px solid yellowgreen;
+  background-color: yellow;
+  border-radius: 5px;
+  margin: auto;
+  color: #043e78;
+  width: 50%;
+  /* border: 3px solid green; */
+  padding: 10px;
+}
+.card-content-back {
+  /* color: orange; */
+  text-align: center;
+  border: 2px solid #faa700;
+  background-color: #faa700;
+  border-radius: 5px;
+  margin: auto;
+  width: 50%;
+  /* border: 3px solid green; */
+  padding: 20px;
+  /* width: 400px; */
+}
