@@ -17,5 +17,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: white;
+  /* background-color: white; */
 }
+
+.backgrounds {
+  background: black;        /* add code the dream orange color (maybe) */
+}
+
+/* .App-header {
+  overflow-x: hidden;   // it doesnt work properly
+} */
