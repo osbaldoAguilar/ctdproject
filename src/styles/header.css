@@ -1,52 +1,19 @@
-::-webkit-scrollbar {
-  width: 0px;
+li {
+  color: #faa700;
+  list-style: none;
 }
 
-.container {
-  display: flex;
-    overflow-x: scroll !important;
-    width: 100%;
+.slide-container {
+  width: 600px;
 }
 
 .card {
-  flex-shrink: 0;
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 10px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: white;
   padding: 50px;
-}
-
-.view-container.dashboard {
-  /* display: block; */
-  width: 100%;
-}
-
-.project-list {
-  color: black;
-  font-weight: bold;
-  list-style: none;
-  padding-top: 7px;
-
-  /* transform: rotate(-90deg); */
-  /* transform-origin: right top; */
-}
-
-.project-titles {
-  padding-top: 13px;
-}
-
-.App-header {
-  overflow-x: hidden;
-}
-
-.background-project-item {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #043e78;
+  font-weight: bolder;
+  margin: auto;
+  border-radius: 8px;
   cursor: pointer;
 }
-
-
-
