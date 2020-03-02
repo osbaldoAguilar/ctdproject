@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../logo.svg";
+import logo from "../../components/styles/images/logo.png";
 import { Block, Header } from "../../components";
 
 class DashBoard extends React.Component {
@@ -40,7 +40,6 @@ class DashBoard extends React.Component {
   }
 
   render() {
-    console.log(this.state.selectedProject);
     // const projectList = this.state.projectData.map(projectitem => {
     //   console.log(projectitem.fields.Name);
     // });

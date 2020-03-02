@@ -1,17 +1,27 @@
 @import "./components/styles/flip.css";
 @import "./components/styles/cardStyles.css";
+@import "./components//styles/scrollTip.css";
 .App {
   text-align: center;
 }
 
 .App-logo {
+  height: 60vmin;
+  pointer-events: none;
+  /* filter: invert(0%); */
+  /* filter: drop-shadow(8px 8px 10px gray); */
+}
+#card-logo {
   height: 40vmin;
   pointer-events: none;
+  /* filter: invert(100%); */
 }
-
+#card-logo-title {
+  height: 5vmin;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
 }
 
