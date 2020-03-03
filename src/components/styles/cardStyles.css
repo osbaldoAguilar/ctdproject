@@ -1,48 +1,140 @@
-.card-content {
-  text-align: center;
+/* .card-content {
+  display: grid;
   border: 12px solid #043e78;
   background-color: #043e78;
   border-radius: 5px;
-  margin: auto;
-  width: 90%;
-  padding: 20px;
+} */
+
+.card-bun {
+  display: grid;
+  grid-template-areas:
+    "image image"
+    "header header"
+    "team team-info"
+    "note note"
+    "note-info note-info"
+    "status status-info"
+    "type type-info"
+    "repo repo-info"
+    "time time-info"
+    "website website-info"
+    "des des"
+    "des-info des-info";
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
 }
-.card-title {
-  text-align: center;
-  background-color: whitesmoke;
-  margin: auto;
-  border-top: #faa700 double 12px;
-  border-bottom: #faa700 double 12px;
-  border-left: #043e78 double 12px;
-  border-right: #043e78 double 12px;
-  /* border-radius: px; */
-  /* border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 35px;
-  border-bottom-right-radius: 35px; */
-  color: #043e78;
-  width: 95%;
+#card-logo-title {
+  height: 5vmin;
   padding: 10px;
-  margin-bottom: 2px;
+  grid-area: image;
 }
-#top {
-  border-top: #faa700 double 12px;
+.card-header {
+  grid-area: header;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+  /* border-top-right-radius: 5px; */
+  font-size: 30px;
 }
-.card-text {
-  /* text-align: center; */
-  background-color: #faa700;
-  border-top: whitesmoke double 12px;
-  border-bottom: whitesmoke double 12px;
-  border-left: #043e78 double 12px;
-  border-right: #043e78 double 12px;
-  justify-content: space-around;
-  display: flex;
-  /* border-radius: 20px; */
-  /* word-spacing: 30px; */
-  margin: auto;
-  margin-bottom: 2px;
-  color: #043e78;
-  width: 95%;
-  padding: 10px;
-  word-wrap: break-word;
+.card-team {
+  grid-area: team;
+  margin-left: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-team-info {
+  grid-area: team-info;
+  margin-right: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-status {
+  grid-area: status;
+  margin-left: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-status-info {
+  grid-area: status-info;
+  margin-right: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-type {
+  grid-area: type;
+  margin-left: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-type-info {
+  grid-area: type-info;
+  margin-right: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-repo {
+  grid-area: repo;
+  margin-left: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-repo-info {
+  grid-area: repo-info;
+  margin-left: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-time {
+  grid-area: time;
+  margin-left: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-time-info {
+  grid-area: time-info;
+  margin-right: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-website {
+  grid-area: website;
+  margin-left: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-website-info {
+  grid-area: website-info;
+  margin-right: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-note {
+  grid-area: note;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-note-info {
+  grid-area: note-info;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-des {
+  grid-area: des;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+.card-des-info {
+  grid-area: des-info;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
 }

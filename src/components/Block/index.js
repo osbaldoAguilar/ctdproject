@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../styles/images/logo.png";
+// import logo from "../styles/images/logo.png";
+import moment from "moment";
 import ctdlogo from "../styles/images/ctdlogo.png";
 import ctd from "../styles/images/ctd-labs-horiz.png";
 
@@ -13,84 +14,74 @@ const Block = props => {
       <div className="flip-card-inner">
         <div className="flip-card-front">
           <div className="card-content">
-            <h2 className="card-title">{project.fields.Name}</h2>
+            <h2>{project.fields.Name}</h2>
           </div>
           <img src={ctdlogo} id="card-logo" />
         </div>
         <div className="flip-card-back">
-          <div className="card-content">
-            {/* <h4 className="card-title" id="top">
-              Project Title
-            </h4> */}
-            <div className="scroll-tip">
-              <img
-                src={ctd}
-                id="card-logo-title"
-                // className="App-logo"
-                alt="logo"
-              />
+          <div className="card-bun">
+            {/* <div className="scroll-tip">
+              <img src={ctd} id="card-logo-title" alt="logo" />
               <div className="scroll-tip-text">
                 Card is scrollable depending on size of content
               </div>
-            </div>
-            <h3 className="card-title">{project.fields.Name}</h3>
-
-            {/* {project.fields.Front_Ends && (
-            <div>Front End: {project.fields.Front_Ends}</div>
-          )} */}
-            {/* {project.fields.Rails_Devs && (
-            <div>Rails Devs: {project.fields.Rails_Devs}</div>
-          )} */}
+            </div> */}
+            <div className="card-header">{project.fields.Name}</div>
             {project.fields.Current_Team && (
-              <div className="block-content-container">
-                <h4 className="card-title">Current Team</h4>
-                <h5 className="card-text">{project.fields.Current_Team}</h5>
-              </div>
+              <>
+                <div className="card-team">Current Team</div>
+                <div className="card-team-info">
+                  {project.fields.Current_Team}
+                </div>
+              </>
             )}
             {project.fields.Status && (
-              <div className="block-content-container">
-                <h4 className="card-title">Stauts</h4>
-                <h5 className="card-text">{project.fields.Status}</h5>
-              </div>
+              <>
+                <div className="card-status">Status</div>
+                <div className="card-status-info">{project.fields.Status}</div>
+              </>
             )}
             {project.fields.Type && (
-              <div className="block-content-container">
-                <h4 className="card-title">Type</h4>
-                <h5 className="card-text">{project.fields.Type}</h5>
-              </div>
+              <>
+                <div className="card-type">Type</div>
+                <div className="card-type-info">{project.fields.Type}</div>
+              </>
             )}
-            {/* {project.fields.External && <div>External{External}</div>} */}
             {project.fields.Repo && (
-              <div className="block-content-container">
-                <h4 className="card-title">Repo</h4>
-                <h5 className="card-text">{project.fields.Repo}</h5>
-              </div>
+              <>
+                <div className="card-repo">Repo</div>
+                <div className="card-repo-info">{project.fields.Repo}</div>
+              </>
             )}
             {project.fields.Notes && (
-              <div className="block-content-container">
-                <h4 className="card-title">Notes</h4>
-                <h5 className="card-text">{project.fields.Notes}</h5>
-              </div>
+              <>
+                <div className="card-note">Notes</div>
+                <div className="card-note-info">{project.fields.Notes}</div>
+              </>
             )}
             {project.fields.Meeting_Time && (
-              <div className="block-content-container">
-                <h4 className="card-title">Meeting Time</h4>
-                <h5 className="card-text">{project.fields.Meeting_Time}</h5>
-              </div>
+              <>
+                <div className="card-time">Meeting Time</div>
+                <div className="card-time-info">
+                  {moment(project.fields.Meeting_Time).format("dddd @ h:mm a")}
+                </div>
+              </>
             )}
             {project.fields.Project_Description && (
-              <div className="block-content-container">
-                <h4 className="card-title">Project Description</h4>
-                <h5 className="card-text">
+              <>
+                <div className="card-des">Project Description</div>
+                <div className="card-des-info">
                   {project.fields.Project_Description}
-                </h5>
-              </div>
+                </div>
+              </>
             )}
             {project.fields.Website && (
-              <div className="block-content-container">
-                <h4 className="card-title">Website</h4>
-                <h5 className="card-text">{project.fields.Website}</h5>
-              </div>
+              <>
+                <div className="card-website">Website</div>
+                <div className="card-website-info">
+                  {project.fields.Website}
+                </div>
+              </>
             )}
           </div>
         </div>
@@ -100,3 +91,21 @@ const Block = props => {
 };
 
 export default Block;
+{
+  /* {project.fields.Front_Ends && (
+            <div>Front End: {project.fields.Front_Ends}</div>
+          )} */
+}
+{
+  /* {project.fields.Rails_Devs && (
+            <div>Rails Devs: {project.fields.Rails_Devs}</div>
+          )} */
+}
+{
+  /* {project.fields.External && <div>External{External}</div>} */
+}
+{
+  /* <div className="card-title" id="top">
+              Project Title
+            </div> */
+}

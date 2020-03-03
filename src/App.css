@@ -16,9 +16,6 @@
   pointer-events: none;
   /* filter: invert(100%); */
 }
-#card-logo-title {
-  height: 5vmin;
-}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 10s linear;
