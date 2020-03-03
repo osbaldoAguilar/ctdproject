@@ -1,0 +1,13 @@
+.sidebar-menu {
+  /* display: grid; */
+  background: #043e78;
+  padding: 10px;
+  width: 400px;
+}
+
+.menu-container {
+  list-style: none;
+  position: left;
+  cursor: pointer;
+}
+

@@ -4,16 +4,25 @@ import { DashBoard } from "./container";
 // import ReactDom from "react-dom";
 // import Modal from "react-modal";
 import "./App.css";
+import OpenClose from './components/OpenClose';
+
+// import SideBar from './components/SideBar'
 
 class App extends React.Component {
   render() {
     return (
       <div className = 'App'>
         <header className = 'App-header'>
-          <DashBoard />        
+          
+          {/* <OpenClose />      */}
+          <DashBoard />  
         </header>
       </div>
     )
   }
 }
 export default App;
+
+
+
+         

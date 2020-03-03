@@ -1,5 +1,6 @@
 import React from "react";
 import { Projects, Block, Header } from "../../components";
+import SideBar from '../../components/SideBar'
 
 class DashBoard extends React.Component {
   constructor(props) {
@@ -51,6 +52,11 @@ class DashBoard extends React.Component {
         {/* <div>Status</div> */}
         <br />
         {/* <Blocks projects={this.state.projectData} /> */}
+        {this.state.projectData && <SideBar
+        projectData = {this.state.projectData}
+        selectProject = {this.selectProject}
+        /> }
+
         {this.state.projectData && <Header 
         projectData = {this.state.projectData}
         selectProject = {this.selectProject}

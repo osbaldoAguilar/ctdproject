@@ -1,9 +1,10 @@
 import React from 'react';
 import { Zoom } from 'react-slideshow-image';
-import '../../styles/header.css'
+import '../../styles/header.css';
+import '../../styles/dashboard.css';
 
 const zoomOutProperties = {
-  duration: 5000,
+  duration: 9000000,
   transitionDuration: 200,
   infinite: true,
   indicators: true,
