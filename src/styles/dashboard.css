@@ -1,4 +1,25 @@
+/* .sidebar-menu {
+  position: relative;
+  right: %;
+} */
+
 .dashboard {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'sidebar-menu slide-container'
+                       /* 'sidebar-menu slide-container'  */
+                       /* 'sidebar-menu slide-container'; */
 }
+
+.slide-container {
+  grid-area: slide-container;
+  grid-template-rows: 3fr;
+  margin: auto;
+}
+
+.sidebar-menu {
+  grid-area: sidebar-menu;
+  grid-template-columns: 8fr;
+}
+
+
+

@@ -11,6 +11,10 @@ class OpenClose extends React.Component {
       isOpen: !this.state.isOpen
     })
     console.log('hello ', this.state.isOpen)
+    let openSlider = this.state.isOpen;
+    if(openSlider === true) {
+      console.log('Hello, Nick')
+    }
   }
     
 
