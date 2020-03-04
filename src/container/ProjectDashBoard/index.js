@@ -1,27 +1,28 @@
 import React from "react";
-import { Projects, Blocks, Header } from "../../components";
+import logo from "../../components/styles/images/logo.png";
+import { FeatureCard, Header } from "../../components";
 
-class DashBoard extends React.Component {
+class ProjectDashBoard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projectData: [],
-      selectedProject: {}
+      projectData: []
+      // selectedProject: {}
     };
   }
   componentDidMount() {
     this.getAirTable();
   }
 
-  selectProject = (id) => {
-    const allProjects = this.state.projectData
-    console.log('see', id)
+  selectProject = id => {
+    const allProjects = this.state.projectData;
+    console.log("see", id);
     const selectedProject = allProjects.find(x => x.id === id);
-    console.log(selectedProject)
+    console.log(selectedProject);
     this.setState({
       selectedProject
-    })
-  }
+    });
+  };
 
   getAirTable() {
     const url = "https://api.airtable.com/v0/appQSPi3XUdUMbM1m/Projects";
@@ -45,19 +46,21 @@ class DashBoard extends React.Component {
     return (
       <div className="view-container dashboard">
         <div className="dashboard-content">
-          {/* <Projects projects={this.state.projectData} /> */}
+          {this.state.projectData && (
+            <Header
+              projectData={this.state.projectData}
+              selectProject={this.selectProject}
+            />
+          )}
+          {this.state.selectedProject ? (
+            <FeatureCard project={this.state.selectedProject} />
+          ) : (
+            <img src={logo} className="App-logo" alt="logo" />
+          )}
         </div>
-        <br />
-        <div>Status</div>
-        <br />
-        {/* <Blocks projects={this.state.projectData} /> */}
-        {this.state.projectData && <Header 
-        projectData = {this.state.projectData}
-        selectProject = {this.selectProject}
-      />  }
       </div>
     );
   }
 }
 
-export default DashBoard;
+export default ProjectDashBoard;
