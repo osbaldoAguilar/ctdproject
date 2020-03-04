@@ -2,7 +2,7 @@ import React from "react";
 // import logo from "../styles/images/logo.png";
 import moment from "moment";
 import ctdlogo from "../styles/images/ctdlogo.png";
-import ctd from "../styles/images/ctd-labs-horiz.png";
+// import ctd from "../styles/images/ctd-labs-horiz.png";
 
 const Block = props => {
   const { project } = props;
