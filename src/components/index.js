@@ -1,4 +1,4 @@
-import Block from "./Block/index";
+import FeatureCard from "./FeatureCard/index";
 import Header from "./Header";
 
-export { Block, Header };
+export { FeatureCard, Header };

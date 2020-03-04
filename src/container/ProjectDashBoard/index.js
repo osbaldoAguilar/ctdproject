@@ -1,8 +1,8 @@
 import React from "react";
 import logo from "../../components/styles/images/logo.png";
-import { Block, Header } from "../../components";
+import { FeatureCard, Header } from "../../components";
 
-class DashBoard extends React.Component {
+class ProjectDashBoard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -53,7 +53,7 @@ class DashBoard extends React.Component {
             />
           )}
           {this.state.selectedProject ? (
-            <Block project={this.state.selectedProject} />
+            <FeatureCard project={this.state.selectedProject} />
           ) : (
             <img src={logo} className="App-logo" alt="logo" />
           )}
@@ -63,4 +63,4 @@ class DashBoard extends React.Component {
   }
 }
 
-export default DashBoard;
+export default ProjectDashBoard;
