@@ -1,3 +1,3 @@
-import DashBoard from "./DashBoard/index";
+import ProjectDashBoard from "./ProjectDashBoard/index";
 
-export { DashBoard };
+export { ProjectDashBoard };

@@ -4,7 +4,7 @@ import moment from "moment";
 import ctdlogo from "../styles/images/ctdlogo.png";
 import ctd from "../styles/images/ctd-labs-horiz.png";
 
-const Block = props => {
+const FeatureCard = props => {
   const { project } = props;
   // console.log("WHAT", project);
   // console.log("Name of the project selected: ", project.fields.Name);
@@ -90,7 +90,7 @@ const Block = props => {
   );
 };
 
-export default Block;
+export default FeatureCard;
 {
   /* {project.fields.Front_Ends && (
             <div>Front End: {project.fields.Front_Ends}</div>
