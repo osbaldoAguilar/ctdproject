@@ -6,14 +6,15 @@
     "header header"
     "team-info status-info"
     "team status";
+  box-sizing: border-box;
   /* "time-info website-info"
     "time website"
     "des des"
     "des-info des-info"; */
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr 2fr 1fr;
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  /* grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 2fr 1fr; */
+  /* grid-column-gap: 5px;
+  grid-row-gap: 5px; */
   justify-content: space-evenly;
   font-family: "Bree Serif", serif;
 }
@@ -31,13 +32,16 @@
   /* border: 1.5px solid #fff; */
   /* border-radius: 5px; */
   /* border-top-right-radius: 5px; */
-  font-size: 100px;
+  /* padding: 10px; */
+  /* overflow-wrap: break-word; */
+  font-size: 80px;
   font-weight: lighter;
   /* font-family: "Bree Serif", serif; */
 }
 .card-team {
   grid-area: team;
   font-size: 25px;
+  /* padding: 10px; */
   /* color: rgb(87, 87, 87); */
   /* font-weight: lighter; */
   /* margin-left: 5px; */
@@ -48,6 +52,7 @@
   grid-area: team-info;
   font-size: 50px;
   font-weight: bolder;
+  /* padding: 10px; */
   /* margin-right: 5px; */
   /* border: 1.5px solid #fff; */
   /* border-radius: 5px; */
@@ -55,6 +60,7 @@
 .card-status {
   grid-area: status;
   font-size: 25px;
+  /* padding: 10px; */
   /* font-weight: lighter; */
   /* margin-left: 5px; */
   /* border: 1.5px solid #fff; */
@@ -64,6 +70,7 @@
   grid-area: status-info;
   font-size: 50px;
   font-weight: bolder;
+  /* padding: 10px; */
   /* margin-right: 5px; */
   /* border: 1.5px solid #fff; */
   /* border-radius: 5px; */

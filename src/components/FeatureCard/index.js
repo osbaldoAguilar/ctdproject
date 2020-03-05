@@ -10,13 +10,13 @@ const FeatureCard = props => {
   return (
     <div className="flip-card">
       <div className="flip-card-inner">
-        <div className="flip-card-front">
+        <div className="flip-card-back">
           <div className="card-content">
             <h2>{project.fields.Name}</h2>
           </div>
           <img src={ctdlogo} id="card-logo" />
         </div>
-        <div className="flip-card-back">
+        <div className="flip-card-front">
           <div className="card-bun">
             {/* <div className="scroll-tip"> */}
             <img src={ctd} id="card-logo-title" alt="logo" />
