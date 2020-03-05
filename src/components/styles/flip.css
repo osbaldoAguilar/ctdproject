@@ -45,7 +45,7 @@
 }
 
 .flip-card-back {
-  background-color: #043e78;
+  background-color: darkgray;
   /* border: 1px solid #ccc; */
   border-radius: 15px;
   color: whitesmoke;
