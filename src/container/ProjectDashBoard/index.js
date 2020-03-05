@@ -50,9 +50,11 @@ class ProjectDashBoard extends React.Component {
   }
 
   render() {
+    // Filtering out the side bar Menu
     let filterProject = this.state.projectData.filter((sideBarFilter) => {
       return sideBarFilter.fields.Name.toUpperCase().includes(this.state.searchName.toUpperCase())
     })
+
     return (
       <div className="view-container dashboard">
         <div className="dashboard-content">
@@ -65,9 +67,9 @@ class ProjectDashBoard extends React.Component {
           )}
 
           {this.state.projectData && (<SearchBar 
-                    projectData={this.state.projectData}
-                    selectProject={this.selectProject}
-                    handleInput={this.handleInput}
+            projectData={this.state.projectData}
+            selectProject={this.selectProject}
+            handleInput={this.handleInput}
           />)}    
              
             />
@@ -76,10 +78,10 @@ class ProjectDashBoard extends React.Component {
           {this.state.selectedProject ? 
             <FeatureCard project={this.state.selectedProject} /> : null }
           
-            {this.state.projectData && <SideBarOpen
-        projectData = {this.state.projectData}
-        selectProject = {this.selectProject}
-        filterProject = {filterProject}
+          {this.state.projectData && <SideBarOpen
+            projectData = {this.state.projectData}
+            selectProject = {this.selectProject}
+            filterProject = {filterProject}
         /> }
         </div>
          
