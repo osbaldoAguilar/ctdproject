@@ -1,7 +1,4 @@
-import Projects from "./Projects/index";
-import Blocks from "./Blocks/index";
-import Header from './Header';
-// import Header from './Slideshow';
+import FeatureCard from "./FeatureCard/index";
+import Header from "./Header";
 
-export { Projects, Blocks, Header };
- 
+export { FeatureCard, Header };

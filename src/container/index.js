@@ -1,4 +1,3 @@
-import DashBoard from "./DashBoard/index";
-// import Modals from "./Modals/index";
+import ProjectDashBoard from "./ProjectDashBoard/index";
 
-export { DashBoard };
+export { ProjectDashBoard };

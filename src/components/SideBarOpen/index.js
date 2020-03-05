@@ -2,16 +2,16 @@ import React from 'react';
 import OpenClose from '../../components/OpenClose'
 import '../../styles/side-menu.css'
 
-const SideBar = (props) => {
-  let sideBarMenu = props.projectData
-  // console.log('check for today\'s ', sideBarMenu)
+const SideBarOpen = (props) => {
+  let sideBarMenu = props.filterProject
+  console.log('check for today\'s ', sideBarMenu)
   return(
     <div className = 'sidebar-menu'>
       <div className = 'btn-home'>
         <OpenClose />
       </div>
       {sideBarMenu.map((sideBar) => 
-      <li key = {sideBar.id}
+      <li key = {sideBar.fields.Name}
       onClick = {() => props.selectProject(sideBar.id)}
       className = 'menu-container'>
         {sideBar.fields.Name.toUpperCase()}
@@ -22,4 +22,4 @@ const SideBar = (props) => {
 
 
 
-export default SideBar
+export default SideBarOpen

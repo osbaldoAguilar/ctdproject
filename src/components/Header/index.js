@@ -1,7 +1,10 @@
 import React from 'react';
+// import SearchBar from '../SearchBar';
 import { Zoom } from 'react-slideshow-image';
 import '../../styles/header.css';
 import '../../styles/dashboard.css';
+
+
 
 const zoomOutProperties = {
   duration: 9000000,

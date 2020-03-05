@@ -11,18 +11,18 @@ class OpenClose extends React.Component {
       isOpen: !this.state.isOpen
     })
     console.log('hello ', this.state.isOpen)
-    let openSlider = this.state.isOpen;
+    let openSlider = !this.state.isOpen;
+    console.log('bernie ', openSlider)
     if(openSlider === true) {
       console.log('Hello, Nick')
     }
   }
     
-
-  handleClose = () => {
-    this.setState({
-      isOpen: false
-    })
-  }
+  // handleClose = () => {
+  //   this.setState({
+  //     isOpen: false
+  //   })
+  // }
 
   render() {
     return(
@@ -35,6 +35,7 @@ class OpenClose extends React.Component {
 
 export default OpenClose
   
+
       
     
     
