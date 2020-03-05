@@ -6,8 +6,6 @@ import ctd from "../styles/images/ctd-labs-horiz.png";
 
 const FeatureCard = props => {
   const { project } = props;
-  // console.log("WHAT", project);
-  // console.log("Name of the project selected: ", project.fields.Name);
 
   return (
     <div className="flip-card">
@@ -20,12 +18,12 @@ const FeatureCard = props => {
         </div>
         <div className="flip-card-back">
           <div className="card-bun">
-            {/* <div className="scroll-tip">
-              <img src={ctd} id="card-logo-title" alt="logo" />
-              <div className="scroll-tip-text">
+            {/* <div className="scroll-tip"> */}
+            <img src={ctd} id="card-logo-title" alt="logo" />
+            {/* <div className="scroll-tip-text">
                 Card is scrollable depending on size of content
-              </div>
-            </div> */}
+              </div> */}
+            {/* </div> */}
             <div className="card-header">{project.fields.Name}</div>
             {project.fields.Current_Team && (
               <>
@@ -41,48 +39,48 @@ const FeatureCard = props => {
                 <div className="card-status-info">{project.fields.Status}</div>
               </>
             )}
-            {project.fields.Type && (
+            {/* {project.fields.Type && (
               <>
                 <div className="card-type">Type</div>
                 <div className="card-type-info">{project.fields.Type}</div>
               </>
-            )}
-            {project.fields.Repo && (
+            )} */}
+            {/* {project.fields.Repo && (
               <>
                 <div className="card-repo">Repo</div>
                 <div className="card-repo-info">{project.fields.Repo}</div>
               </>
-            )}
-            {project.fields.Notes && (
+            )} */}
+            {/* {project.fields.Notes && (
               <>
                 <div className="card-note">Notes</div>
                 <div className="card-note-info">{project.fields.Notes}</div>
               </>
-            )}
-            {project.fields.Meeting_Time && (
+            )} */}
+            {/* {project.fields.Meeting_Time && (
               <>
                 <div className="card-time">Meeting Time</div>
                 <div className="card-time-info">
                   {moment(project.fields.Meeting_Time).format("dddd @ h:mm a")}
                 </div>
               </>
-            )}
-            {project.fields.Project_Description && (
+            )} */}
+            {/* {project.fields.Project_Description && (
               <>
                 <div className="card-des">Project Description</div>
                 <div className="card-des-info">
                   {project.fields.Project_Description}
                 </div>
               </>
-            )}
-            {project.fields.Website && (
+            )} */}
+            {/* {project.fields.Website && (
               <>
                 <div className="card-website">Website</div>
                 <div className="card-website-info">
                   {project.fields.Website}
                 </div>
               </>
-            )}
+            )} */}
           </div>
         </div>
       </div>

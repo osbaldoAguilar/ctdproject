@@ -1,27 +1,21 @@
-/* .card-content {
-  display: grid;
-  border: 12px solid #043e78;
-  background-color: #043e78;
-  border-radius: 5px;
-} */
-
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
 .card-bun {
   display: grid;
   grid-template-areas:
     "image image"
     "header header"
-    "team team-info"
-    "note note"
-    "note-info note-info"
-    "status status-info"
-    "type type-info"
-    "repo repo-info"
-    "time time-info"
-    "website website-info"
+    "team-info status-info"
+    "team status";
+  /* "time-info website-info"
+    "time website"
     "des des"
-    "des-info des-info";
+    "des-info des-info"; */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 2fr 1fr;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
+  justify-content: space-evenly;
+  font-family: "Bree Serif", serif;
 }
 #card-logo-title {
   height: 5vmin;
@@ -30,111 +24,123 @@
 }
 .card-header {
   grid-area: header;
-  margin-top: 5px;
-  margin-right: 5px;
-  margin-left: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  /* margin-top: 25px; */
+  /* margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom: 25px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
   /* border-top-right-radius: 5px; */
-  font-size: 30px;
+  font-size: 100px;
+  font-weight: lighter;
+  /* font-family: "Bree Serif", serif; */
 }
 .card-team {
   grid-area: team;
-  margin-left: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  font-size: 25px;
+  /* color: rgb(87, 87, 87); */
+  /* font-weight: lighter; */
+  /* margin-left: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-team-info {
   grid-area: team-info;
-  margin-right: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  font-size: 50px;
+  font-weight: bolder;
+  /* margin-right: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-status {
   grid-area: status;
-  margin-left: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  font-size: 25px;
+  /* font-weight: lighter; */
+  /* margin-left: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-status-info {
   grid-area: status-info;
-  margin-right: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  font-size: 50px;
+  font-weight: bolder;
+  /* margin-right: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-type {
   grid-area: type;
-  margin-left: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  /* margin-left: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-type-info {
   grid-area: type-info;
-  margin-right: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  /* margin-right: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-repo {
   grid-area: repo;
-  margin-left: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  /* margin-left: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-repo-info {
   grid-area: repo-info;
-  margin-left: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  /* margin-left: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-time {
   grid-area: time;
-  margin-left: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  /* margin-left: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-time-info {
   grid-area: time-info;
-  margin-right: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  /* margin-right: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-website {
   grid-area: website;
-  margin-left: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  /* margin-left: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-website-info {
   grid-area: website-info;
-  margin-right: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  /* margin-right: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-note {
   grid-area: note;
-  margin-right: 5px;
-  margin-left: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  /* margin-right: 5px; */
+  /* margin-left: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-note-info {
   grid-area: note-info;
-  margin-right: 5px;
-  margin-left: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  /* margin-right: 5px; */
+  /* margin-left: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-des {
   grid-area: des;
-  margin-right: 5px;
-  margin-left: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  /* margin-right: 5px; */
+  /* margin-left: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
 .card-des-info {
   grid-area: des-info;
-  margin-right: 5px;
-  margin-left: 5px;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+  /* margin-right: 5px; */
+  /* margin-left: 5px; */
+  /* border: 1.5px solid #fff; */
+  /* border-radius: 5px; */
 }
