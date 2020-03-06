@@ -1,40 +1,28 @@
-/* .App {
-  text-align: center;
-} */
+@import "./components/styles/flip.css";
+@import "./components/styles/cardStyles.css";
+@import "./components/styles/dashboard.css";
+@import "./components/styles/side-menu.css";
+@import "./components/styles/header.css";
 
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-@import './components/styles/flip.css';
-@import './components/styles/cardStyles.css';
-/* /* @media (prefers-reduced-motion: no-preference) { */
 .App-logo {
   height: 60vmin;
   pointer-events: none;
   filter: invert(0%);
   filter: drop-shadow(8px 8px 10px gray);
 }
-#card-logo {
-  height: 40vmin;
-  pointer-events: none;
-  /* filter: invert(100%); */
-}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 10s linear;
   }
-} 
+}
 
-.projectList { 
-  /* float: left; */
+.projectList {
   text-align: row;
   border: 12px solid #043e78;
   background-color: #043e78;
   border-radius: 5px;
   margin: auto;
   width: 50%;
-  /* border: 3px solid green; */
   padding: 20px;
 }
 
@@ -49,4 +37,4 @@ h3 {
   to {
     transform: rotate(360deg);
   }
-} 
+}

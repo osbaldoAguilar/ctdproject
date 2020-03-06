@@ -6,141 +6,193 @@
     "header header"
     "team-info status-info"
     "team status";
-  /* "time-info website-info"
-    "time website"
-    "des des"
-    "des-info des-info"; */
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr 2fr 1fr;
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  justify-content: space-evenly;
-  font-family: "Bree Serif", serif;
+  box-sizing: border-box;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: auto;
+  justify-items: center;
+}
+#card-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 #card-logo-title {
   height: 5vmin;
   padding: 10px;
+  background-color: black;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
   grid-area: image;
 }
+#card-logo-title:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
 .card-header {
   grid-area: header;
-  /* margin-top: 25px; */
-  /* margin-right: 25px;
-  margin-left: 25px;
-  margin-bottom: 25px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
-  /* border-top-right-radius: 5px; */
-  font-size: 100px;
-  font-weight: lighter;
-  /* font-family: "Bree Serif", serif; */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  line-height: 55px;
+  align-items: center;
+  content: "";
+  /* display: block;
+  margin: 0 auto;
+  width: 30%;
+  padding-top: 20px;
+  border-bottom: 10px double orange; This creates the border. Replace black with whatever color you want. */
+  /* border-radius: 10px; */
+  font-size: 70px;
+  font-weight: bolder;
+}
+.card-header:hover {
+  text-shadow: 11px 2px 11px rgba(33, 33, 33, 0.2);
 }
 .card-team {
   grid-area: team;
   font-size: 25px;
-  /* color: rgb(87, 87, 87); */
-  /* font-weight: lighter; */
-  /* margin-left: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+  width: 50%;
+  height: auto;
+  color: silver;
 }
 .card-team-info {
   grid-area: team-info;
   font-size: 50px;
-  font-weight: bolder;
-  /* margin-right: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+  width: 50%;
+  height: auto;
+  color: whitesmoke;
+}
+.card-team-info:hover {
+  text-shadow: 11px 2px 11px rgba(33, 33, 33, 0.2);
 }
 .card-status {
   grid-area: status;
   font-size: 25px;
-  /* font-weight: lighter; */
-  /* margin-left: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+  width: 50%;
+  height: auto;
+  color: silver;
 }
 .card-status-info {
   grid-area: status-info;
   font-size: 50px;
-  font-weight: bolder;
-  /* margin-right: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+  width: 50%;
+  display: inline-block;
+  align-self: center;
+  color: whitesmoke;
 }
-.card-type {
+.card-status-info:hover {
+  text-shadow: 11px 2px 11px rgba(33, 33, 33, 0.2);
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+/*.card-type {
   grid-area: type;
   /* margin-left: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+/* border: 1.5px solid #fff; */
+/* border-radius: 5px; 
 }
 .card-type-info {
   grid-area: type-info;
   /* margin-right: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+/* border: 1.5px solid #fff; */
+/* border-radius: 5px; 
 }
 .card-repo {
   grid-area: repo;
   /* margin-left: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
-}
+/* border: 1.5px solid #fff; */
+/* border-radius: 5px; *
 .card-repo-info {
   grid-area: repo-info;
   /* margin-left: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+/* border: 1.5px solid #fff; */
+/* border-radius: 5px; *
 }
 .card-time {
   grid-area: time;
   /* margin-left: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+/* border: 1.5px solid #fff; */
+/* border-radius: 5px; *
 }
 .card-time-info {
   grid-area: time-info;
   /* margin-right: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+/* border: 1.5px solid #fff; */
+/* border-radius: 5px; *
 }
 .card-website {
   grid-area: website;
   /* margin-left: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+/* border: 1.5px solid #fff; */
+/* border-radius: 5px; *
 }
 .card-website-info {
   grid-area: website-info;
   /* margin-right: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+/* border: 1.5px solid #fff; */
+/* border-radius: 5px; *
 }
 .card-note {
   grid-area: note;
   /* margin-right: 5px; */
-  /* margin-left: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+/* margin-left: 5px; */
+/* border: 1.5px solid #fff; */
+/* border-radius: 5px; *
 }
 .card-note-info {
   grid-area: note-info;
   /* margin-right: 5px; */
-  /* margin-left: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+/* margin-left: 5px; */
+/* border: 1.5px solid #fff; */
+/* border-radius: 5px; *
 }
 .card-des {
   grid-area: des;
   /* margin-right: 5px; */
-  /* margin-left: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
+/* margin-left: 5px; */
+/* border: 1.5px solid #fff; */
+/* border-radius: 5px; *
 }
 .card-des-info {
   grid-area: des-info;
   /* margin-right: 5px; */
-  /* margin-left: 5px; */
-  /* border: 1.5px solid #fff; */
-  /* border-radius: 5px; */
-}
+/* margin-left: 5px; */
+/* border: 1.5px solid #fff; */
+/* border-radius: 5px; *
+} */

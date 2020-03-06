@@ -45,7 +45,12 @@
 }
 
 .flip-card-back {
-  background-color: darkgray;
+  /* background-image: url("../styles/images/ctdLiving.jpg"); */
+  /* filter: blur(8px); */
+  background-color: slategray;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   /* border: 1px solid #ccc; */
   border-radius: 15px;
   color: whitesmoke;
