@@ -1,6 +1,6 @@
 import React from "react";
-import SideBarOpen from '../../components/SideBarOpen'
-import logo from "../../components/styles/images/logo.png";
+import SideBarOpen from "../../components/SideBarOpen";
+// import logo from "../../components/styles/images/logo.png";
 import { FeatureCard, Header } from "../../components";
 import SearchBar from "../../components/SearchBar";
 
@@ -9,7 +9,7 @@ class ProjectDashBoard extends React.Component {
     super(props);
     this.state = {
       projectData: [],
-      searchName: ''
+      searchName: ""
       // selectedProject: {}
     };
   }
@@ -27,12 +27,12 @@ class ProjectDashBoard extends React.Component {
     });
   };
 
-  handleInput = (e) => {
-    console.log(e.target.value)
+  handleInput = e => {
+    console.log(e.target.value);
     this.setState({
       searchName: e.target.value
-    })
-  }
+    });
+  };
 
   getAirTable() {
     const url = "https://api.airtable.com/v0/appQSPi3XUdUMbM1m/Projects";
@@ -51,40 +51,45 @@ class ProjectDashBoard extends React.Component {
 
   render() {
     // Filtering out the side bar Menu
-    let filterProject = this.state.projectData.filter((sideBarFilter) => {
-      return sideBarFilter.fields.Name.toUpperCase().includes(this.state.searchName.toUpperCase())
-    })
+    let filterProject = this.state.projectData.filter(sideBarFilter => {
+      return sideBarFilter.fields.Name.toUpperCase().includes(
+        this.state.searchName.toUpperCase()
+      );
+    });
 
     return (
       <div className="view-container dashboard">
         <div className="dashboard-content">
-        <div>
+          <div>
+            {this.state.projectData && (
+              <Header
+                projectData={this.state.projectData}
+                selectProject={this.selectProject}
+              />
+            )}
+            {this.state.projectData && (
+              <SearchBar
+                projectData={this.state.projectData}
+                selectProject={this.selectProject}
+                handleInput={this.handleInput}
+              />
+            )}
+            />
+          </div>
+
+          {this.state.selectedProject ? (
+            <FeatureCard project={this.state.selectedProject} />
+          ) : null}
+
           {this.state.projectData && (
-            <Header
+            <SideBarOpen
               projectData={this.state.projectData}
               selectProject={this.selectProject}
+              filterProject={filterProject}
             />
           )}
+        </div>
 
-          {this.state.projectData && (<SearchBar 
-            projectData={this.state.projectData}
-            selectProject={this.selectProject}
-            handleInput={this.handleInput}
-          />)}    
-             
-            />
-        </div>
-          
-          {this.state.selectedProject ? 
-            <FeatureCard project={this.state.selectedProject} /> : null }
-          
-          {this.state.projectData && <SideBarOpen
-            projectData = {this.state.projectData}
-            selectProject = {this.selectProject}
-            filterProject = {filterProject}
-        /> }
-        </div>
-         
         {/* {this.state.projectData && <Header 
         projectData = {this.state.projectData}
         selectProject = {this.selectProject}
@@ -95,7 +100,3 @@ class ProjectDashBoard extends React.Component {
 }
 
 export default ProjectDashBoard;
-
-  
-
-

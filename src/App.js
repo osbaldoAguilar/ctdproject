@@ -1,7 +1,7 @@
 import React from "react";
 import { ProjectDashBoard } from "./container";
 import "./App.css";
-import OpenClose from './components/OpenClose';
+// import OpenClose from "./components/OpenClose";
 
 class App extends React.Component {
   render() {
@@ -11,11 +11,7 @@ class App extends React.Component {
           <ProjectDashBoard />
         </header>
       </div>
-    )
+    );
   }
 }
 export default App;
-
-
-
-         

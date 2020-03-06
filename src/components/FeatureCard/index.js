@@ -1,6 +1,6 @@
 import React from "react";
 // import logo from "../styles/images/logo.png";
-import moment from "moment";
+// import moment from "moment";
 import ctdlogo from "../styles/images/ctdlogo.png";
 import ctd from "../styles/images/ctd-labs-horiz.png";
 
@@ -14,12 +14,12 @@ const FeatureCard = props => {
           <div className="card-content">
             <h2>{project.fields.Name}</h2>
           </div>
-          <img src={ctdlogo} id="card-logo" />
+          <img src={ctdlogo} id="card-logo" alt={ctd} />
         </div>
         <div className="flip-card-back">
           <div className="card-bun">
             {/* <div className="scroll-tip"> */}
-            <img src={ctd} id="card-logo-title" alt="logo" />
+            <img src={ctd} id="card-logo-title" alt={ctdlogo} />
             {/* <div className="scroll-tip-text">
                 Card is scrollable depending on size of content
               </div> */}
@@ -89,4 +89,3 @@ const FeatureCard = props => {
 };
 
 export default FeatureCard;
-
