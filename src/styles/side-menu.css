@@ -1,14 +1,19 @@
 .sidebar-menu {
-  
-  background: #043e78;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
   padding: 10px;
-  /* width: 400px; */
-  
+  border-style: solid;
+  border-color: #0066cc;
+  border-radius: 10px;
 }
 
 .menu-container {
+  color: #f15c39;
   list-style: none;
   position: left;
   cursor: pointer;
+  padding: 5px;
+  
 }
 

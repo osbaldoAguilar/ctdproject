@@ -1,5 +1,6 @@
 import React from 'react';
 import OpenClose from '../../components/OpenClose'
+import SearchBar from '../SearchBar';
 import '../../styles/side-menu.css'
 
 const SideBarOpen = (props) => {
@@ -9,6 +10,7 @@ const SideBarOpen = (props) => {
     <div className = 'sidebar-menu'>
       <div className = 'btn-home'>
         <OpenClose />
+        {/* <SearchBar /> */}
       </div>
       {sideBarMenu.map((sideBar) => 
       <li key = {sideBar.fields.Name}
@@ -19,7 +21,5 @@ const SideBarOpen = (props) => {
     </div>
   )
 }
-
-
 
 export default SideBarOpen

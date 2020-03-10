@@ -1,9 +1,11 @@
 import React from 'react';
+import '../../styles/button.css';
 // import SideBar from '../../components/SideBar'
 
 class OpenClose extends React.Component {
   state = {
     isOpen: false,
+    toggle: false
   }
 
   handleOpen = () => {
@@ -17,6 +19,10 @@ class OpenClose extends React.Component {
       console.log('Hello, Nick')
     }
   }
+// changes the hamburger button 
+  buttonChangeOnClick = (x) => {
+    x.classList.toggle('change');
+  }
     
   // handleClose = () => {
   //   this.setState({
@@ -26,8 +32,11 @@ class OpenClose extends React.Component {
 
   render() {
     return(
-      <div>
-        <button onClick = {this.handleOpen}>test</button>
+      <div className = 'button-container' onClick = {this.handleOpen}>
+        {/* <button onClick = {this.handleOpen}>test</button> */}
+        <div className = "bar1"></div>
+        <div className = "bar2"></div>
+        <div className = "bar3"></div>
       </div>
     )
   }

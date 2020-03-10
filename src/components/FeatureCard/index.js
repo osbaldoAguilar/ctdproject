@@ -6,7 +6,7 @@ import ctd from "../styles/images/ctd-labs-horiz.png";
 
 const FeatureCard = props => {
   const { project } = props;
-  // console.log("WHAT", project);
+  console.log("WHAT", project);
   // console.log("Name of the project selected: ", project.fields.Name);
 
   return (

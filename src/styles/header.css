@@ -4,11 +4,15 @@
 
 .card {
   /* padding: 100px 50px; */
-  background-color: #043e78;
+  background-color: #fff;
   font-weight: bolder;
   margin: auto;
   border-radius: 8px;
   cursor: pointer;
-  color: #faa700;
+  color: #f15c39;
   list-style: none;
+  border-style: solid;
+  border-color: #0066cc;
+  padding: 8px;
+  text-align: center;
 }
